@@ -18,11 +18,17 @@ import frameSdk, { Context } from '@farcaster/frame-sdk'
  * - Premium prediction options
  */
 function Home({ context }: { context: Context.FrameContext }) {
+  console.log("mounts")
+    if (context) {
+      
+      console.log('User interaction:', context);
+    }
+
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-purple-900 to-indigo-900 text-white">
       <main className="max-w-md w-full px-4 py-8 flex flex-col items-center">
         <Header />
-        <FortuneTeller />
+        <FortuneTeller  />
         <SocialSharing />
         <PremiumSection />
       </main>
